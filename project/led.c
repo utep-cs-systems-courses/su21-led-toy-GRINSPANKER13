@@ -8,7 +8,8 @@ static char redVal[] = {0, LED_RED}, greenVal[] = {0, LED_GREEN};
 
 void led_init()
 {
-  P1DIR |= LEDS;// bits attached to leds are output
+  P1DIR |= LEDS; // bits attached to leds are output
+  P1OUT = 0; // initialize every bit of P1OUT
   led_changed = 1;
   led_update();
 }
