@@ -2,12 +2,10 @@
 
 #define stateMachine_included
 
-void set_red(char o);
+void red_control(char limit);
 void toggle_red();
-void dim_red();
-void set_green(char o);
+void green_control(char limit);
 void toggle_green();
-void dim_green();
-void state_advance();
+void state_advance(char s);
 
 #endif // included
