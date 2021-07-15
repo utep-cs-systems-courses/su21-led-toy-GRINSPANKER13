@@ -46,8 +46,7 @@ void toggle_green() {
 void state_advance(char s) {
   switch(s) {
   case 0:
-    red_on = 0;
-    green_on = 0;
+    led_off();
     break;
   case 1:
     red_control(1);
