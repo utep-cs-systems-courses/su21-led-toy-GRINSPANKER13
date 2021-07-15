@@ -1,5 +1,6 @@
 #include <msp430.h>
 #include "led.h"
+#include "switches.h"
 
 unsigned char red_on = 0, green_on = 0;
 unsigned char led_changed = 0;
@@ -14,8 +15,7 @@ void led_init()
   led_update();
 }
 
-void led_update()
-{
+void led_update() {
   if (led_changed) {
     char ledFlags = redVal[red_on] | greenVal[green_on];
     P1OUT &= (0xff^LEDS) | ledFlags; // clear bit for off leds
